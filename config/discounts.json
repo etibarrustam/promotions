@@ -1,0 +1,12 @@
+{
+  "rules": [
+    {
+      "condition": "category == 'boots'",
+      "percentage": 30
+    },
+    {
+      "condition": "sku == '000003'",
+      "percentage": 15
+    }
+  ]
+}
