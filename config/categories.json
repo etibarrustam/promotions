@@ -1,13 +1,16 @@
 [
   {
+    "id": 1,
     "name": "boots",
     "description": "Stylish and durable boots for all occasions."
   },
   {
+    "id": 2,
     "name": "sandals",
     "description": "Comfortable and trendy sandals for summer."
   },
   {
+    "id": 3,
     "name": "sneakers",
     "description": "Casual and versatile sneakers for everyday wear."
   }

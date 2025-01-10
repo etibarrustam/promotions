@@ -1,5 +1,8 @@
 {
     "name": "etibar/promotions",
+    "require": {
+        "ext-pdo": "*"
+    },
     "require-dev": {
         "phpunit/phpunit": "^9.0"
     },
@@ -13,6 +16,5 @@
             "name": "Etibar Rustamzada",
             "email": "etibar.rustem@gmail.com"
         }
-    ],
-    "require": {}
+    ]
 }

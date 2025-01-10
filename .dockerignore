@@ -1,0 +1,12 @@
+vendor
+
+.git
+.gitignore
+
+.docker/*
+!docker-compose.yaml
+
+*.tmp
+*.swp
+*.bak
+.DS_Store

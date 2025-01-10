@@ -2,18 +2,22 @@
 
 namespace App\Infrastructure\Http;
 
+use JetBrains\PhpStorm\NoReturn;
+
 class Response
 {
     public function __construct(
-        private readonly int $statusCode = HttpStatusCode::OK->value,
+        private int $statusCode = HttpStatusCode::OK->value,
         private readonly string $body = '',
         private array $headers = [],
     ) {
     }
 
-    public function setHeader(string $name, string $value): void
+    public function setHeader(string $name, string $value): self
     {
         $this->headers[$name] = $value;
+
+        return $this;
     }
 
     public function send(): void
@@ -23,6 +27,13 @@ class Response
             header("{$name}: {$value}");
         }
         echo $this->body;
+    }
+
+    public function setStatusCode(int $statusCode): self
+    {
+        $this->statusCode = $statusCode;
+
+        return $this;
     }
 
     public static function json(array $data, int $statusCode = HttpStatusCode::OK->value): self

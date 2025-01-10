@@ -1,42 +1,42 @@
 [
   {
+    "id": 1,
     "sku": "000001",
     "name": "BV Lean leather ankle boots",
-    "category": "boots",
-    "price": {
-      "original": 89000
-    }
+    "category_id": 1,
+    "category_name": "boots",
+    "price": 89000
   },
   {
+    "id": 2,
     "sku": "000002",
     "name": "BV Lean leather ankle boots",
-    "category": "boots",
-    "price": {
-      "original": 99000
-    }
+    "category_id": 1,
+    "category_name": "boots",
+    "price": 99000
   },
   {
+    "id": 3,
     "sku": "000003",
     "name": "Ashlington leather ankle boots",
-    "category": "boots",
-    "price": {
-      "original": 71000
-    }
+    "category_id": 1,
+    "category_name": "boots",
+    "price": 71000
   },
   {
+    "id": 4,
     "sku": "000004",
     "name": "Naima embellished suede sandals",
-    "category": "sandals",
-    "price": {
-      "original": 79500
-    }
+    "category_id": 2,
+    "category_name": "sandals",
+    "price": 79500
   },
   {
+    "id": 5,
     "sku": "000005",
     "name": "Nathane leather sneakers",
-    "category": "sneakers",
-    "price": {
-      "original": 59000
-    }
+    "category_id": 3,
+    "category_name": "sneakers",
+    "price": 59000
   }
 ]

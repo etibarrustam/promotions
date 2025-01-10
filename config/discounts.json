@@ -1,12 +1,14 @@
-{
-  "rules": [
-    {
-      "condition": "category == 'boots'",
-      "percentage": 30
-    },
-    {
-      "condition": "sku == '000003'",
-      "percentage": 15
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "type": "category",
+    "target_id": 1,
+    "percentage": 30
+  },
+  {
+    "id": 2,
+    "type": "product",
+    "target_id": 3,
+    "percentage": 15
+  }
+]

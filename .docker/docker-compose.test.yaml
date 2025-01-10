@@ -1,0 +1,40 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+      target: db-instance
+    container_name: promotions_test
+    environment:
+      - APP_ENV=testing
+      - ENV_FILE=.env.testing
+      - DB_DRIVER=${DB_DRIVER}
+      - DB_PORT=${DB_PORT}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+    volumes:
+      - ../:/var/www
+    networks:
+      - app-network
+
+  database:
+    image: mysql:8.0
+    container_name: promotions_test_db_host
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT:-3307}:${DB_PORT:-3306}
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - ./.db_data_test:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  test-network:
+    driver: bridge

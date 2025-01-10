@@ -1,0 +1,8 @@
+services:
+  app:
+    environment:
+      - ENV_FILE=${ENV_FILE:-.env.json}
+
+networks:
+  app-network:
+    driver: bridge

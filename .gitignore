@@ -1,3 +1,8 @@
 .idea
+.docker/.db_data
 requirements.md
 /vendor/
+.env
+.env.db
+.env.json
+.env.testing
